@@ -28,3 +28,10 @@ function get_fds_for_proc(){
 function get_threads_for_proc(){
     ls -l /proc/${1}/task|wc -l
 }
+
+# get number of threads for certain process
+# usage:get_threads_for_proc pid
+# pid: is process id
+function get_topN_proc(){
+    ps H -eo pid,pcpu|sort -nk2|head -n 10
+}
