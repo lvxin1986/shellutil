@@ -35,3 +35,10 @@ function get_threads_for_proc(){
 function get_topN_proc(){
     ps H -eo pid,pcpu|sort -nk2|head -n 10
 }
+
+# get number of cpu cores
+# usage:get_cpu_cores
+function get_cpu_cores(){
+    grep 'model name' /proc/cpuinfo | wc -l
+}
+

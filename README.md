@@ -5,7 +5,8 @@ you can use this utils collection as follows:
 
 ```$xslt
 #!/usr/bin/env bash
-source ../main.sh
+#${SHELLUTIL_PATH} is the path of shellutil project
+source ${SHELLUTIL_PATH}/main.sh
 
 
 log_warn "warning test"
